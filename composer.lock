@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1629abbb640a9fe0280e95fc215de768",
+    "hash": "aa4ef88947c06ed68a4a8f5708a29a1a",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -226,16 +226,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v4.1.22",
+            "version": "v4.1.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a18a892c9d768464249baa1d16117fe52e0a7004"
+                "reference": "054c1a29aaf537c6c6ca7e7804375c671eddcaaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a18a892c9d768464249baa1d16117fe52e0a7004",
-                "reference": "a18a892c9d768464249baa1d16117fe52e0a7004",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/054c1a29aaf537c6c6ca7e7804375c671eddcaaf",
+                "reference": "054c1a29aaf537c6c6ca7e7804375c671eddcaaf",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +339,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2014-02-20 15:13:32"
+            "time": "2014-02-28 22:07:47"
         },
         {
             "name": "monolog/monolog",
@@ -500,16 +500,16 @@
         },
         {
             "name": "patchwork/utf8",
-            "version": "v1.1.18",
+            "version": "v1.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
-                "reference": "66a936cc633fe13378c91f81030d5193be968480"
+                "reference": "aea0de833cba7cf2c25239be71f2787edaee36d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/66a936cc633fe13378c91f81030d5193be968480",
-                "reference": "66a936cc633fe13378c91f81030d5193be968480",
+                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/aea0de833cba7cf2c25239be71f2787edaee36d5",
+                "reference": "aea0de833cba7cf2c25239be71f2787edaee36d5",
                 "shasum": ""
             },
             "require": {
@@ -547,7 +547,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2014-02-02 17:09:49"
+            "time": "2014-03-01 20:01:07"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -1558,6 +1558,48 @@
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
             "time": "2014-02-03 17:15:33"
+        },
+        {
+            "name": "twitter/bootstrap",
+            "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "a365d8689c3f3cee7f1acf86b61270ecca8e106d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a365d8689c3f3cee7f1acf86b61270ecca8e106d",
+                "reference": "a365d8689c3f3cee7f1acf86b61270ecca8e106d",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2014-02-13 17:24:59"
         }
     ],
     "packages-dev": [

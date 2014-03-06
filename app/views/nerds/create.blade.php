@@ -1,6 +1,7 @@
 @extends('layouts.nerd')
 @section('main')
 
+<h1>All the Nerds</h1>
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
@@ -25,3 +26,4 @@
 
 {{ Form::close() }}
 
+@stop

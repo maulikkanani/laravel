@@ -1,5 +1,6 @@
 @extends('layouts.nerd')
 @section('main')
+<h1>All the Nerds</h1>
 <table class="table table-striped table-bordered">
 	<thead>
 		<tr>
@@ -38,3 +39,4 @@
 	@endforeach
 	</tbody>
 </table>
+@stop
