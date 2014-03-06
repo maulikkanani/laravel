@@ -26,3 +26,9 @@ Route::post('login', array('uses' => 'HomeController@doLogin'));
 
 // route to LogOut the form
 Route::get('logout', array('uses' => 'HomeController@doLogout'));
+
+Route::get('register', array('uses' => 'HomeController@showRegister'));
+
+Route::post('register', array('uses' => 'HomeController@doRegister'));
+
+Route::controller('users', 'UsersController');

@@ -1,0 +1,15 @@
+<?php $__env->startSection('main'); ?>
+
+
+<h1>Showing <?php echo $nerd->name; ?></h1>
+
+	<div class="jumbotron text-center">
+		<h2><?php echo $nerd->name; ?></h2>
+		<p>
+			<strong>Email:</strong> <?php echo $nerd->email; ?><br>
+			<strong>Level:</strong> <?php echo $nerd->nerd_level; ?>
+		</p>
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.nerd', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
