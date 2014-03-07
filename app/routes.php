@@ -29,6 +29,8 @@ Route::get('logout', array('uses' => 'HomeController@doLogout'));
 
 Route::get('register', array('uses' => 'HomeController@showRegister'));
 
-Route::post('register', array('uses' => 'HomeController@doRegister'));
+Route::post('create', array('uses' => 'HomeController@doRegister'));
 
-Route::controller('users', 'UsersController');
+Route::get('sticky', 'StickyController@index');
+
+Route::get('add', 'StickyController@showsticky');

@@ -57,11 +57,11 @@ class HomeController extends BaseController {
                 // return Redirect::to('secure');
                 // for now we'll just echo success (even though echoing in a controller is bad)
                 Session::flash('message', 'Login Successfully.');
-                $this->layout->content = View::make('user.login');
+                return Redirect::to('sticky');
             } else {
                 // validation not successful, send back to form	
                 Session::flash('message', 'User Authentication Fails.');
-                return View::make('user.login');
+                 $this->layout->content =View::make('user.login');
             }
         }
     }
@@ -76,7 +76,9 @@ class HomeController extends BaseController {
     }
 
     public function doRegister() {
+        
         $rules = array(
+            'username' => 'unique:users',
             'firstname' => 'required|alpha|min:2',
             'lastname' => 'required|alpha|min:2',
             'email' => 'required|email|unique:users',
@@ -88,13 +90,16 @@ class HomeController extends BaseController {
             $user = new User;
             $user->firstname = Input::get('firstname');
             $user->lastname = Input::get('lastname');
+            $user->username = Input::get('username');
             $user->email = Input::get('email');
             $user->password = Hash::make(Input::get('password'));
             $user->save();
-
             return Redirect::to('login')->with('message', 'Thanks for registering!');
         } else {
             Session::flash('message', 'Please fill correct formate'); 
+            return Redirect::to('register')
+                            ->withErrors($validator) // send back all errors to the login form
+                            ->withInput(Input::except('password'));
         }
     }
 

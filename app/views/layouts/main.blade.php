@@ -6,26 +6,35 @@
 
     	<title>Authentication App With Laravel 4</title>
 
-    	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
+    	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     	{{ HTML::style('css/main.css')}}
+     <!-- Latest compiled and minified JavaScript -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>     
+     
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   	</head>
 
   	<body>
 
-	  	<div class="navbar navbar-fixed-top">
-		  	<div class="navbar-inner">
-		    	<div class="container">
-					<ul class="nav">  
+	  	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+					<ul class="nav nav-pills">  
 						@if(!Auth::check())
 							<li>{{ HTML::link('register', 'Register') }}</li>   
 							<li>{{ HTML::link('login', 'Login') }}</li>   
 						@else
+                                                        <li>{{ HTML::link('sticky', 'Add') }}</li>  
 							<li>{{ HTML::link('logout', 'logout') }}</li>
 						@endif
 					</ul>  
-		    	</div>
-		  	</div>
-		</div> 	            
+		    
+		  	</div><!-- /.container-fluid -->
+</nav>	            
 
 	    <div class="container">
 	    	@if(Session::has('message'))
