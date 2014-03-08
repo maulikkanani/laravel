@@ -9,12 +9,10 @@ class StickyController extends \BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{
-                $results = Sticky::where('user_id', Auth::user()->id);
-                echo '<pre>'; print_r($results);
-                exit;
-		$this->layout->content=View::make('sticky.show')
-                                       ->with('result',$results)  ;
+	{       
+                $results=Sticky::where('user_id','=', Auth::user()->id)->get();
+		$this->layout->content=View::make('sticky.show') 
+                                       ->with('results',$results);
 	}
 
 	/**

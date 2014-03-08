@@ -36,3 +36,13 @@ body {
 textarea:hover {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
 }
+
+.stick_note:hover .delete-sticky {
+    display: block;
+}
+
+.delete-sticky {
+    display: none;
+    float: left;
+    margin: 5px 0 0 -35px;
+} 
