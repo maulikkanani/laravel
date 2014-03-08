@@ -5,8 +5,13 @@ jQuery(document).ready(function(){
                type:"POST",
                url:'add/',
                success:function(data){
-                   $( "#create" ).before(data);
+                   $( "#create" ).after(data);
                }
         });
     });
+    
+    jQuery(document).on('click','.delete-sticky', function(){
+        alert('assdasd');
+    });
+    
 });

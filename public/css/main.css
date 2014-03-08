@@ -28,7 +28,7 @@ body {
     background: linear-gradient(#F9EFAF, #F7E98D) repeat scroll 0 0 rgba(0, 0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font: 20px/1.5 'Gloria Hallelujah',cursive;
-    max-height: 250px;
+    height: 250px !important;
     max-width: 520px;
     transition: -webkit-box-shadow 0.5s ease 0s;
 }
@@ -44,5 +44,7 @@ textarea:hover {
 .delete-sticky {
     display: none;
     float: left;
-    margin: 5px 0 0 -35px;
+    font-size: 20px;
+    margin: 5px 0 0 -44px;
+    cursor: pointer;
 } 
