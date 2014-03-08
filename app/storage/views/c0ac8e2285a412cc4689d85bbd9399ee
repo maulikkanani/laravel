@@ -6,26 +6,36 @@
 
     	<title>Authentication App With Laravel 4</title>
 
-    	<?php echo HTML::style('packages/bootstrap/css/bootstrap.min.css'); ?>
+    	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     	<?php echo HTML::style('css/main.css'); ?>
+        
+     <!-- Latest compiled and minified JavaScript -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>     
+ <?php echo HTML::script('js/comman.js'); ?>    
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   	</head>
 
   	<body>
 
-	  	<div class="navbar navbar-fixed-top">
-		  	<div class="navbar-inner">
-		    	<div class="container">
-					<ul class="nav">  
+	  	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+					<ul class="nav nav-pills">  
 						<?php if(!Auth::check()): ?>
 							<li><?php echo HTML::link('register', 'Register'); ?></li>   
 							<li><?php echo HTML::link('login', 'Login'); ?></li>   
 						<?php else: ?>
+                                                        <li><?php echo HTML::link('sticky', 'Add'); ?></li>  
 							<li><?php echo HTML::link('logout', 'logout'); ?></li>
 						<?php endif; ?>
 					</ul>  
-		    	</div>
-		  	</div>
-		</div> 	            
+		    
+		  	</div><!-- /.container-fluid -->
+</nav>	            
 
 	    <div class="container">
 	    	<?php if(Session::has('message')): ?>

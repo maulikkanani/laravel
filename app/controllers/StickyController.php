@@ -10,7 +10,11 @@ class StickyController extends \BaseController {
 	 */
 	public function index()
 	{
-		$this->layout->content=View::make('sticky.show');
+                $results = Sticky::where('user_id', Auth::user()->id);
+                echo '<pre>'; print_r($results);
+                exit;
+		$this->layout->content=View::make('sticky.show')
+                                       ->with('result',$results)  ;
 	}
 
 	/**
@@ -20,7 +24,7 @@ class StickyController extends \BaseController {
 	 */
 	public function showsticky()
 	{
-		echo 'test';//
+		
 	}
 
 	/**
@@ -28,9 +32,15 @@ class StickyController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function addnew()
 	{
-		//
+                $sticky=new Sticky;
+                $sticky->sitck_data='';
+                $sticky->user_id= Auth::user()->id;
+                $sticky->save();
+                $stickid=$sticky->id;
+                return View::make('sticky.add')
+                                     ->with('stickid', $stickid);
 	}
 
 	/**

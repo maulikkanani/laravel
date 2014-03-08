@@ -33,4 +33,4 @@ Route::post('create', array('uses' => 'HomeController@doRegister'));
 
 Route::get('sticky', 'StickyController@index');
 
-Route::get('add', 'StickyController@showsticky');
+Route::get('add', 'StickyController@addnew');
