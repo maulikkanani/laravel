@@ -4,7 +4,7 @@
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    	<title>Authentication App With Laravel 4</title>
+    	<title>Sticky Note Laravel</title>
 
     	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -29,7 +29,6 @@
 							<li>{{ HTML::link('register', 'Register') }}</li>   
 							<li>{{ HTML::link('login', 'Login') }}</li>   
 						@else
-                                                        <li>{{ HTML::link('sticky', 'Add') }}</li>  
 							<li>{{ HTML::link('logout', 'logout') }}</li>
 						@endif
 					</ul>  

@@ -10,7 +10,7 @@ class StickyController extends \BaseController {
 	 */
 	public function index()
 	{       
-                $results=Sticky::where('user_id','=', Auth::user()->id)->get();
+                $results=Sticky::where('user_id','=', Auth::user()->id)->orderBy('id', 'DESC')->get();
 		$this->layout->content=View::make('sticky.show') 
                                        ->with('results',$results);
 	}
@@ -58,9 +58,12 @@ class StickyController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit()
 	{
-		//
+                $sticky = Sticky::find(Input::get('id'));
+		$sticky->sitck_data=Input::get('data');
+                $sticky->save();
+                exit;
 	}
 
 	/**
@@ -80,9 +83,10 @@ class StickyController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy()
 	{
-		//
+            Sticky::destroy(Input::get('id'));
+            return Input::get('id');
 	}
 
 }

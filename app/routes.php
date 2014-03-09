@@ -21,7 +21,7 @@ Route::resource('nerds', 'NerdController');
 // route to show the login form
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 
-// route to process the form
+// route to process the login
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 
 // route to LogOut the form
@@ -33,4 +33,8 @@ Route::post('create', array('uses' => 'HomeController@doRegister'));
 
 Route::get('sticky', 'StickyController@index');
 
-Route::get('add', 'StickyController@addnew');
+Route::post('add', 'StickyController@addnew');
+
+Route::post("sticky/remove", 'StickyController@destroy');
+
+Route::post("sticky/update", 'StickyController@edit');
