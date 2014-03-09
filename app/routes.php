@@ -38,3 +38,5 @@ Route::post('add', 'StickyController@addnew');
 Route::post("sticky/remove", 'StickyController@destroy');
 
 Route::post("sticky/update", 'StickyController@edit');
+
+Route::resource('setting', 'settingController');
