@@ -19,6 +19,8 @@ Route::get('/', function()
 Route::resource('nerds', 'NerdController');
 
 // route to show the login form
+Route::get('/', array('uses' => 'HomeController@showLogin'));
+
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 
 // route to process the login
