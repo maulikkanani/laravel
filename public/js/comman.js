@@ -38,9 +38,9 @@ jQuery(document).ready(function() {
     });
 
     jQuery(window).scroll(function(event) {
-         if (jQuery(window).data('ajaxready') == false) return;
+        if (jQuery(window).data('ajaxready') == false) return;
         if (jQuery(window).scrollTop() >= (jQuery(document).height() - jQuery(window).height())) {
-            var total = 18;
+            var total = jQuery('#total-item').val();
             if (limit < total) {
                 jQuery('#sticky_loader').show();
                 jQuery(window).data('ajaxready', false);

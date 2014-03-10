@@ -19,8 +19,11 @@ class StickyController extends \BaseController {
                             ->skip(0)
                             ->take(8)
                             ->get();
+         $count = Sticky::where('user_id', '=', Auth::user()->id)
+                            ->count();
+                 
         $this->layout->content = View::make('sticky.show')
-                ->with('results', $results);
+                ->with(array('results'=>$results,'count'=>$count));
     }
 
     /**

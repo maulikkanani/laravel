@@ -13,5 +13,6 @@
          {{ HTML::image("image/ajax-loader.gif", "Loader") }}
        </center>
    </div>
+   <input type="hidden" value="{{$count}}" id="total-item">
 </div>
 

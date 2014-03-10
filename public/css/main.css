@@ -24,7 +24,7 @@ body {
 }
 
 .textarea_design {
-    background: linear-gradient(#F9EFAF, #F7E98D) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: linear-gradient(#F9EFAF, #FF867F) repeat fixed 0 0 rgba(0, 0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font: 20px/1.5 'Gloria Hallelujah',cursive;
     height: 250px !important;
