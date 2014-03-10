@@ -17,7 +17,7 @@ class StickyController extends \BaseController {
         $results = Sticky::where('user_id', '=', Auth::user()->id)
                             ->orderBy('id', 'DESC')
                             ->skip(0)
-                            ->take(5)
+                            ->take(8)
                             ->get();
         $this->layout->content = View::make('sticky.show')
                 ->with('results', $results);
@@ -54,7 +54,7 @@ class StickyController extends \BaseController {
      */
     public function show() {
         $skip=Input::get('limit');
-        $take=Input::get('limit')+3;
+        $take=3;
         $results = Sticky::where('user_id', '=', Auth::user()->id)
                             ->orderBy('id', 'DESC')
                             ->skip($skip)

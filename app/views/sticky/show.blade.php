@@ -8,6 +8,10 @@
          <span  id="remove-{{ $value->id }}" sticky="{{ $value->id }}"  class="glyphicon glyphicon-remove-circle delete-sticky red"></span>
     </div>
    @endforeach
-
+   <div class="col-sm-12 col-lg-12" style="display:none" id="sticky_loader">
+       <center>
+         {{ HTML::image("image/ajax-loader.gif", "Loader") }}
+       </center>
+   </div>
 </div>
 
