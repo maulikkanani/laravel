@@ -3,7 +3,6 @@
 class StickyController extends \BaseController {
 
     protected $layout = "layouts.main";
-
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +14,11 @@ class StickyController extends \BaseController {
             return Redirect::to('login');
         }
 
-        $results = Sticky::where('user_id', '=', Auth::user()->id)->orderBy('id', 'DESC')->get();
+        $results = Sticky::where('user_id', '=', Auth::user()->id)
+                            ->orderBy('id', 'DESC')
+                            ->skip(0)
+                            ->take(5)
+                            ->get();
         $this->layout->content = View::make('sticky.show')
                 ->with('results', $results);
     }
@@ -26,7 +29,6 @@ class StickyController extends \BaseController {
      * @return Response
      */
     public function showsticky() {
-        
     }
 
     /**
@@ -50,8 +52,17 @@ class StickyController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function show($id) {
-        //
+    public function show() {
+        $skip=Input::get('limit');
+        $take=Input::get('limit')+3;
+        $results = Sticky::where('user_id', '=', Auth::user()->id)
+                            ->orderBy('id', 'DESC')
+                            ->skip($skip)
+                            ->take($take)
+                            ->get();
+        
+         return View::make('sticky.scroll')
+         ->with('results', $results);
     }
 
     /**
