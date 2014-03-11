@@ -37,6 +37,8 @@ jQuery(document).ready(function() {
 
     });
 
+    //jQuery(window).mkscroll();
+    
     jQuery(window).scroll(function(event) {
         if (jQuery(window).data('ajaxready') == false) return;
         if (jQuery(window).scrollTop() >= (jQuery(document).height() - jQuery(window).height())) {
