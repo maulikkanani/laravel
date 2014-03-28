@@ -17,7 +17,14 @@ Route::get('/', function()
 });
 
 Route::resource('nerds', 'NerdController');
+Route::controller('users','UsersController');
 
+Route::get('test', function()
+{
+	return View::make('index');
+});
+
+Route::controller('Contact','ContactController');   
 // route to show the login form
 Route::get('/', array('uses' => 'HomeController@showLogin'));
 

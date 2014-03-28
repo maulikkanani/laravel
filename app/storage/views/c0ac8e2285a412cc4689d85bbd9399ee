@@ -18,6 +18,8 @@
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>     
  <?php echo HTML::script('js/mkscroll.js'); ?>    
  <?php echo HTML::script('js/comman.js'); ?>    
+ <?php echo HTML::script('js/lib/angular.min.js'); ?>
+ <?php echo HTML::script('js/lib/angular-resource.min.js'); ?>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   	</head>
 
